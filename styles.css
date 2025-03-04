@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --background: url('background.jpg');
+    --primary-color: #ff0000;
+    --button-hover: #ff4d4d;
+    --text-color: white;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --background: #121212;
+    --primary-color: #00ffcc;
+    --button-hover: #00bfa5;
+    --text-color: #f1f1f1;
+    --glass-bg: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    background: var(--glass-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--primary-color);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px var(--primary-color);
+}
+
+/* Buttons */
+.glow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 220px;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.glow-button:hover {
+    background: var(--button-hover);
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: scale(1.05);
+}
+
+.glow-button i {
+    font-size: 1.2em;
+}
+
+/* Error Button */
+.error-btn {
+    background: red;
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.error-btn:hover {
+    background: darkred;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+}
+
+/* Dark/Light Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 1em;
+    opacity: 0.8;
+}
